@@ -1,0 +1,232 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    position: relative;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 0 3em;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+}
+
+.main .greet .help {
+    margin-top: -40px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .main-container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin: 0 9em;
+    margin-bottom: 1em;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: #dfe4ea;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: 0 9em;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.resault {
+    padding: 0px 13%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.resault::-webkit-scrollbar {
+    display: none;
+}
+
+.resault-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.resault-title img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.resault-data img {
+    width: 24px;
+}
+
+.resault-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.loader hr {
+    border-radius: 5px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #5fb9f9, #ffffff, #5fb9f9);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px;
+    }
+
+    100% {
+        background-position: 800px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main .nav {
+        display: flex;
+        align-items: center;
+        padding: 20px 15px;
+        font-size: 22px;
+        color: #585858;
+    }
+
+    .main .nav img {
+        width: 30px;
+        border-radius: 50%;
+        margin-top: -6px;
+    }
+    .main .greet .help{
+        margin-top: -20px;
+    }
+    .main .greet {
+        margin: 0 18px;
+        font-size: 30px;
+        color: #c4c7c5;
+        font-weight: 500;
+    }
+    .main .main-container .cards {
+        display: flex;
+        position: relative;
+        gap: 15px;
+        padding: 20px;
+        margin: 0 -10px;
+        margin-bottom: 1em;
+    }
+
+    .main .card {
+        height: 130px;
+        width: 170px;
+        background-color: #f0f4f9;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+    .main .card img {
+        width: 35px;
+        padding: 5px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .main .card p {
+        color: #585858;
+        font-size: 13px;
+    }
+    .main .main-bottom{
+        margin-left: 10px;
+    }
+}
